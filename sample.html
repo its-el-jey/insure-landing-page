@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 8</title>
+    <style type="text/css">
+      body {
+        background: linear-gradient(to top right, #949bc0, #ffffff, #b9d6dd, #cea7b3) no-repeat;
+        height: 100vh;
+        position: relative;
+      } 
+      label, input {
+        margin: 10px 0;
+      }
+      .modal {
+        position: absolute;
+        padding: 10px;
+        width: 200px;
+        height: 100px;
+        background: white;
+        text-align: center;
+        display: none;
+        transition: all 2s ease;
+      }
+    </style>
+</head>
+<body>
+    <div class="form">
+      <h1>Greet A Person</h1>
+      <form action="#" method="post">
+          <label>Last Name:</label>
+            <input id="lname" type="text" name="lname" placeholder="enter your lastname"><br>
+          <label>First Name:<label>
+            <input id="fname" type="text" name="fname" placeholder="enter your firstname"><br>
+          <button class="greeting-btn">Greetings!</button>
+      </form>
+    </div>
+
+    <div class="modal" id="modal">
+      <!-- <button class="close-button">&times;</button> -->
+        <div class="modal-body">
+            Hello! <p id="name"></p>
+        </div>
+        <div class="modal-btn">
+          <button>ok</button>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        const openModal = document.querySelector('.modal');
+        const btn = document.querySelector('.greeting-btn');
+        const lastName = document.getElementById('lname').value;
+        const firstName = document.getElementById('fname').value;
+        const outputName = document.getElementById('name');
+
+
+        outputName.innerHTML = lastName + ' ' + firstName;
+         
+        btn.addEventListener('click', function(){
+          openModal.style.display = "block"
+        })
+
+    </script>
+</body>
+</html>
