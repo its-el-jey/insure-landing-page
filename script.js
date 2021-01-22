@@ -1,3 +1,22 @@
+/*===== SCROLL REVEAL ANIMATION =====*/
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '80px',
+  duration: 2000,
+  reset: true
+  });
+  
+  
+  sr.reveal('.header', {}); 
+  sr.reveal('.intro-title', {}); 
+  sr.reveal('.intro-description', {delay: 100}); 
+  sr.reveal('.img', {delay: 100}); 
+  sr.reveal('.intro-button', {delay: 200}); 
+  sr.reveal('.features-section-title', {delay: 100}); 
+  sr.reveal('.feature', {delay: 200}); 
+  sr.reveal('.outro', {delay: 100}); 
+
+// 
 const hamburgerLink = document.getElementById('hamburger-link')
 const mobileNav = document.getElementById('mobile-nav')
 const container = document.getElementById('container')
